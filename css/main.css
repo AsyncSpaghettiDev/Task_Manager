@@ -25,6 +25,10 @@
     border-end-end-radius: 0.5em;
 }
 
+.info h3 {
+    text-align: center;
+}
+
 .info .form {
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@
     row-gap: 0.25em;
 }
 
-.form-control{
+.form-control {
     display: flex;
     flex-direction: column;
     row-gap: 0.2em;
@@ -46,13 +50,13 @@
     border-radius: 0.25em;
 }
 
-.form-control .form-color{
+.form-control .form-color {
     width: 12ch;
     padding-block: 0.15em;
     padding-inline: 0.45em;
 }
 
-.form-control .form-input{
+.form-control .form-input {
     text-align: center;
     padding-block: 0.45em;
 }
@@ -82,7 +86,7 @@
 }
 
 .icon.fas {
-    color: var(--clr-400);
+    color: #efefef;
     text-shadow: 0 0 10px var(--clr-800);
 }
 
@@ -92,7 +96,7 @@
     ============
 */
 
-.container .list{
+.container .list {
     flex: 3;
     padding: 0.5em;
 }
@@ -115,4 +119,68 @@
     font-weight: bold;
     border-color: var(--clr-200);
     color: var(--clr-800);
+}
+
+/*
+    ==================
+    Tasks List Section
+    ==================
+*/
+
+#tasks-list {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin-block: 0.5em;
+}
+
+.task {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border: 1px solid var(--clr-800);
+    border-radius: 0.25em;
+    max-width: 600px;
+    column-gap: 0.2em;
+    cursor: cell;
+    transition: background-color 350ms ease-out;
+}
+
+.task_info {
+    flex: 1;
+}
+
+.task_info:nth-child(2) {
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid var(--clr-800);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.task_actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    width: fit-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.task_actions i {
+    padding: 0.2em;
+    border-radius: 0.25em;
+    transition: background-color 350ms ease-out;
+    cursor: pointer;
+}
+
+.task_actions i:hover {
+    background-color: red;
 }
