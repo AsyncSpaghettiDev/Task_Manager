@@ -128,9 +128,9 @@
 */
 
 #tasks-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 0.5em;
-    flex-wrap: wrap;
     margin-block: 0.5em;
 }
 
@@ -139,7 +139,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-grow: 1;
     align-items: center;
     padding-block: 0.5em;
     padding-inline: 1em;
@@ -148,7 +147,13 @@
     max-width: 600px;
     column-gap: 0.2em;
     cursor: cell;
-    transition: background-color 350ms ease-out;
+    transition: background-color 350ms ease-out, box-shadow 150ms ease-in,
+        border-color 200ms ease-in;
+}
+
+.task:hover {
+    box-shadow: 0 0 10px var(--clr-800);
+    border-color: #000;
 }
 
 .task_info {
@@ -183,4 +188,10 @@
 
 .task_actions i:hover {
     background-color: red;
+}
+
+@media screen and (max-width: 600px) {
+    #tasks-list {
+        grid-template-columns: 1fr;
+    }
 }

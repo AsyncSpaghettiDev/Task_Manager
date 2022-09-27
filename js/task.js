@@ -8,6 +8,6 @@ class Task {
         this.category = category;
         this.isImportant = important;
 
-        this.name = "Jonathan";
+        this.name = "Jonathan_M";
     }
 }
